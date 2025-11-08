@@ -99,7 +99,7 @@ function Comments({ articleId }: CommentsProps) {
           }}
         >
           {({ user, signOut }) => (
-            <form onSubmit={(e) => handleSubmitComment(e, user)} className="comment-form">
+            <form onSubmit={(e) => user && handleSubmitComment(e, user)} className="comment-form">
               <div className="user-info">
                 Signed in as {user?.username || 'User'}
               </div>

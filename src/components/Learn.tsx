@@ -7,8 +7,6 @@ import DOMPurify from 'dompurify';
 import '../styles/shared.css';
 import './Learn.css';
 
-interface LearnProps {}
-
 function Learn(): JSX.Element {
   const [selectedTutorial, setSelectedTutorial] = useState<Tutorial | null>(null);
   const [showWelcome, setShowWelcome] = useState(true);
