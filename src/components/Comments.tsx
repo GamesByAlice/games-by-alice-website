@@ -11,7 +11,7 @@ function Comments({ articleId, isDarkMode }: CommentsProps) {
   return (
     <div className="comments-container">
       <Giscus
-        repo="GamesByAlice/games-by-alice-website"
+        repo="GamesByAlice/aws-amplify-website"
         repoId="R_kgDOQPTsmw"
         category="General"
         categoryId="DIC_kwDOQPTsm84CyFrZ"
