@@ -7,7 +7,11 @@ import DOMPurify from 'dompurify';
 import '../styles/shared.css';
 import './Learn.css';
 
-function Learn(): JSX.Element {
+interface LearnProps {
+  isDarkMode: boolean;
+}
+
+function Learn({ isDarkMode }: LearnProps): JSX.Element {
   const [selectedTutorial, setSelectedTutorial] = useState<Tutorial | null>(null);
   const [showWelcome, setShowWelcome] = useState(true);
 
@@ -45,7 +49,7 @@ function Learn(): JSX.Element {
             <article>
               <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(selectedTutorial.content) }} />
             </article>
-            <Comments articleId={selectedTutorial.id} />
+            <Comments articleId={selectedTutorial.id} isDarkMode={isDarkMode} />
           </div>
         );
       }

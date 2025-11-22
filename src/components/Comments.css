@@ -26,3 +26,32 @@
   align-items: center;
   margin-top: 0.5rem;
 }
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.btn-delete:hover {
+  background-color: var(--danger-color, #dc3545);
+  color: white;
+}
+
+.btn-delete:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

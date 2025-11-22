@@ -33,7 +33,7 @@ function App() {
       <Header title="Alice Dugie" tagline="Full-stack Software Engineer" isCollapsed={activeTab === 'learn-tab'} />
       <TabNavigation activeTab={activeTab} onTabClick={handleTabClick} isDarkMode={isDarkMode} onToggleDarkMode={() => setIsDarkMode(!isDarkMode)} />
       <div className="flex-1">
-        <TabContent activeTab={activeTab} />
+        <TabContent activeTab={activeTab} isDarkMode={isDarkMode} />
       </div>
       <Footer name="Alice Dugie" year={2025} />
     </div>
